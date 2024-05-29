@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8777:5000"  # Map external port 8777 to internal port 5000
+    volumes:
+      - ./Scores.txt:/app/Scores.txt
+    command: python MainScores.py
